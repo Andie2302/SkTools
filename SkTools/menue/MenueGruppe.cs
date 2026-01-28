@@ -1,10 +1,10 @@
 namespace SkTools.menue;
 
 public record MenueGruppe(
-    string Name,
-    string Id,
-    string Color,
-    string Active,
-    string PrinterId,
-    List<MenueEintrag> MenueEinträge
+    string Name,  //Name der Gruppe
+    int Id, //Id der Gruppe (Ganzzahl)
+    string Color, // Farbe der Gruppe (HEX-Code)
+    bool Active, // Wird die Gruppe angezeigt? (true/false)
+    int PrinterId, // Id des Druckers (Ganzzahl)
+    List<MenueEintrag> MenueEinträge // Liste der Menüeinträge in dieser Gruppe
 );
