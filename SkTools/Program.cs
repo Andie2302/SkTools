@@ -11,13 +11,30 @@ await using var db = new AppDbContext();
 await db.Database.EnsureCreatedAsync();
 
 // 1. Erstellen einer Gruppe mit Einträgen
-var neueGruppe = new MenueGruppe(1, "Getränke", "#FF5733", true, new List<MenueEintrag>());
 
-var eintrag1 = new MenueEintrag(1, "Mineralwasser 0.5l", "Wasser", "#0000FF", false, 2.50m, 19m, 1);
-var eintrag2 = new MenueEintrag(2, "Apfelsaftschorle 0.5l", "Schorle", "#FFFF00", false, 3.20m, 19m, 1);
+var neueGruppe = new MenueGruppe 
+{ 
+    Id = 1, 
+    Name = "Getränke", 
+    Color = "#FF5733", 
+    Einblenden = true 
+};
 
-neueGruppe.MenueEinträge.Add(eintrag1);
-neueGruppe.MenueEinträge.Add(eintrag2);
+neueGruppe.MenueEinträge.Add(new MenueEintrag 
+{ 
+    Id = 1, 
+    NameLang = "Wasser", 
+    Price = 2.50m, 
+    MenueGruppeId = 1 
+});
+
+neueGruppe.MenueEinträge.Add(new MenueEintrag 
+{ 
+    Id = 2, 
+    NameLang = "Schorle", 
+    Price = 3.20m, 
+    MenueGruppeId = 1 
+});
 
 // 2. Speichern (Die Gruppe und alle enthaltenen Einträge werden gespeichert)
 db.MenueGruppen.Add(neueGruppe);
