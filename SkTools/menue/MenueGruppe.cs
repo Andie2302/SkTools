@@ -1,9 +1,13 @@
+
 namespace SkTools.menue;
 
-public record MenueGruppe(
-    int Id, // Primärschlüssel
-    string Name,
-    string Color,
-    bool Einblenden,
-    List<MenueEintrag> MenueEinträge // EF Core erkennt dies als 1-zu-n Beziehung
-);
+public class MenueGruppe
+{
+    public int Id { get; set; }
+    public string Name { get; set; } = string.Empty;
+    public string Color { get; set; } = string.Empty;
+    public bool Einblenden { get; set; }
+    
+    // Initialisiere die Liste direkt, um NullReferenceExceptions zu vermeiden
+    public List<MenueEintrag> MenueEinträge { get; set; } = new();
+}
