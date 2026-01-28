@@ -1,4 +1,4 @@
-namespace SkTools;
+namespace SkTools.menue;
 
 public record MenueEintrag(
     string NameLong,
