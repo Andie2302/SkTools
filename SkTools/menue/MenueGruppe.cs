@@ -1,4 +1,4 @@
-namespace SkTools;
+namespace SkTools.menue;
 
 public record MenueGruppe(
     string Name,
