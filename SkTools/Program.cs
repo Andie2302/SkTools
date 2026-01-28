@@ -7,7 +7,7 @@ using SkTools.menue;
 Console.WriteLine("Hello, World!");
 
 
-using var db = new AppDbContext();
+await using var db = new AppDbContext();
 await db.Database.EnsureCreatedAsync();
 
 // 1. Erstellen einer Gruppe mit Einträgen
