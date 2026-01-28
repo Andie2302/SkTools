@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace SkTools;
 
 public class AppDbContext : DbContext
