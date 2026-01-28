@@ -22,18 +22,14 @@ var neueGruppe = new MenueGruppe
 
 neueGruppe.MenueEinträge.Add(new MenueEintrag 
 { 
-    Id = 1, 
     NameLang = "Wasser", 
-    Price = 2.50m, 
-    MenueGruppeId = 1 
+    Price = 2.50m 
 });
 
 neueGruppe.MenueEinträge.Add(new MenueEintrag 
 { 
-    Id = 2, 
     NameLang = "Schorle", 
-    Price = 3.20m, 
-    MenueGruppeId = 1 
+    Price = 3.20m 
 });
 
 // 2. Speichern (Die Gruppe und alle enthaltenen Einträge werden gespeichert)
